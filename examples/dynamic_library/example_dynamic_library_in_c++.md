@@ -24,7 +24,7 @@ $ g++ -shared -fPIC -o libtest.so test.cc
 ### 3. Use the test library in a test project
 
 ```c++
-\\ main.cc
+// main.cc
 #include <iostream>
 #include "test.h"
 int main()
