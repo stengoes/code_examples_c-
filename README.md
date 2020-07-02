@@ -6,6 +6,7 @@ I have created and collected these examples for quick reference of basic concept
 
 # Table of contents
 
-### Compiling & Libraries
+### Compiling, Linking & Libraries
 1. [Dynamic libraries: creating, compiling and using them.](https://github.com/stengoes/code_examples_cc/tree/master/examples/dynamic_library/example_dynamic_library_in_c++.md)  
 2. [Static libraries: creating, compiling and using them.](https://github.com/stengoes/code_examples_cc/tree/master/examples/static_library/example_static_library_in_c++.md)
+3. [Include guards: the problem and the solution ](https://github.com/stengoes/code_examples_cc/tree/master/examples/include_guard/example_include_guard_in_c++.md)
