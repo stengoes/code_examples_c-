@@ -31,7 +31,7 @@ ar: creating archive libtest.a
 ### 4. Use the test library in a test project
 
 ```c++
-\\ main.cc
+// main.cc
 #include <iostream>
 #include "test.h"
 int main()
