@@ -4,7 +4,7 @@ This repository contains a collection of (minimal) code examples and boilerplate
 
 I have created and collected these examples for quick reference of basic concepts and to educate myself by means of "doing" rather than reading.
 
-# Table of contents
+# Table of Contents
 
 ### Compiling, Linking & Libraries
 1. [Dynamic libraries: creating, compiling and using them](https://github.com/stengoes/code_examples_cc/tree/master/examples/dynamic_library)  
