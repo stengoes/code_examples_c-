@@ -12,4 +12,4 @@ I have created and collected these examples for quick reference of basic concept
 3. [Include guards: the problem and the solution ](https://github.com/stengoes/code_examples_cc/tree/master/examples/include_guard)
 
 ### Time
-1. [Timer class: asynchronously executes a callback function after a specified timeout expires](https://github.com/stengoes/code_examples_cc/tree/master/examples/timers)
+1. [Timer class: asynchronously execute a callback function after a specified timeout has expired](https://github.com/stengoes/code_examples_cc/tree/master/examples/timers)
