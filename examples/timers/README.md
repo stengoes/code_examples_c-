@@ -1,6 +1,6 @@
 
-Implementation of a Timer class that asynchronously executes a function after a specified timeout has expired.
-Note that while waiting for expiration, the Timer could also be reset or stopped!
+Implementation of a Timer class that asynchronously executes a callback function after a specified timeout has expired.
+Note that in this implementation you can also reset or stop the Timer!
 
 ### Timer 
 TODO: document the Timer class a little more here!
