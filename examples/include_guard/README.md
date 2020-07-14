@@ -2,8 +2,8 @@ A minimal example for guarding against multiple includes in C++.
 
 ### The problem
 ```
-TODO: explain multiple includes causing problmes when linking.
-TODO: explain easyness of getting multiple inclusions with an include cycle.
+TODO: explain that including the same definition multiple times, causes problmes when linking.
+TODO: explain why including the same header file multiple times is not as dumb of a mistake as it may first seem. Picture an include cycle for example.
 ```
 
 ### The solution
@@ -27,13 +27,17 @@ TODO: explain easyness of getting multiple inclusions with an include cycle.
 ```
 
 #### Disadvantages:
-* Not part of the C++ ISO standard (though widely supported by )
+* Not part of the C++ ISO standard, though widely supported by almost all compilers.
+* It is not part of the standard, because it cannot handle symbolic linking of header files properly.
 
 #### Advantages:
-* Less code than include guard
-* Less prone to bugs
-* No name clashes
-* Faster compile times (for some compilers)
+* Less code than include guard (it is only 1 line).
+* Therefore it is less prone to typos.
+* No need to come up with unique naming convention, hence no name clashes (especially important in big projects).
+* Faster compile times for some compilers (not really).
+
+## Conclusion
+I use both solutions. 
 
 ## References:
 1. [Google C++ Style Guide: the #define Guard](https://google.github.io/styleguide/cppguide.html#The__define_Guard)
