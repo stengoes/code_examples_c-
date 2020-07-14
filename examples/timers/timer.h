@@ -10,6 +10,7 @@ class Timer
 
 private:
   std::chrono::nanoseconds timeout;
+  bool is_interval = false;
   std::function<void()> callback;
 
   std::thread timer_thread;
@@ -20,24 +21,27 @@ private:
   void thread()
   {
     std::unique_lock<std::mutex> lock(this->mutex);
-    this->cv.wait_for(
-        lock,
-        this->timeout,
-        [this] { return this->stop_signal; } // Predicate function to guard against spurious wake-up calls
-    );
+    do{
+      this->cv.wait_for(
+          lock,
+          this->timeout,
+          [this] { return this->stop_signal; } // Predicate function to guard against spurious wake-up calls
+      );
 
-    if (this->stop_signal)
-      return;
-    else
-      this->callback();
+      if (this->stop_signal)
+        return;
+      else
+        this->callback();
+    } while(this->is_interval);
   }
 
 public:
   // Use variadic template (a C++11 feature) that can handle a variable number ... of arguments
   template <typename Function, typename... Args>
-  Timer(const std::chrono::nanoseconds timeout, Function &&func, Args &&... args)
+  Timer(const std::chrono::nanoseconds timeout, const bool is_interval, Function &&func, Args &&... args)
   {
     this->timeout = timeout;
+    this->is_interval = is_interval;
 
     // Change function signature to void() by binding arguments
     this->callback = std::function<void()>(std::bind(std::forward<Function>(func), std::forward<Args>(args)...));

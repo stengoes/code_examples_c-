@@ -24,9 +24,9 @@ int main()
   std::cout << get_time() << "Program start" << std::endl;
 
   // Create 3 timers
-  Timer timer1(std::chrono::seconds(3), &multiply, 1, 5);
-  Timer timer2(std::chrono::seconds(6), &multiply, 8, 5);
-  Timer timer3(std::chrono::seconds(14), &multiply, 3, 17);
+  Timer timer1(std::chrono::seconds(3), false, &multiply, 1, 5);
+  Timer timer2(std::chrono::seconds(6), false, &multiply, 8, 5);
+  Timer timer3(std::chrono::seconds(14), false, &multiply, 3, 17);
 
   // Start all timers
   timer1.start();
